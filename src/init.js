@@ -1,1 +1,3 @@
-import data from './data.js';
+import loadWindow from './events/loadEvent.js';
+
+loadWindow();
