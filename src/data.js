@@ -7,7 +7,7 @@ const getApiWeather = async () => {
     const dataGrouped = groupByDay(data.hourly.time);
     const temp = data.hourly.temperature_2m;
     const degreeCelsius = data.hourly_units.temperature_2m;
-console.log(data)
+    console.log(data);
     createCards(dataGrouped, temp, degreeCelsius);
 };
 
