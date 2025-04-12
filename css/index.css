@@ -1,71 +1,133 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, #b9d7f1, #cce7ff);
+* {
     margin: 0;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
     min-height: 100vh;
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     text-align: center;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-.date {
-    font-size: 1rem;
-    margin-top: 1.2rem;
-    margin-bottom: 0.3rem;
-    text-align: center;
-    color: #1565c0;
-    padding-left: 4px;
-    /* border-left: 3px solid #64b5f6; */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a3c6d;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .weather-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: grid;
+    gap: 20px;
+}
+
+.date {
+    font-size: 1.8rem;
+    color: #1a3c6d;
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cardList {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 15px;
+    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .card {
-    width: 60px;
-    height: 80px;
-    background: #ffffff;
-    border: 1px solid #dbeafe;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    padding: 0.4rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 12px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cardTime {
-    font-weight: 500;
-    color: #37474f;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
 }
 
 .iconCard {
-    font-size: 1rem;
-    margin: 0.2rem 0;
+    font-size: 2rem;
+    margin: 10px 0;
+    animation: bounce 2s infinite;
+}
+
+.cardTemp {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.cardTemp.red {
+    color: #e63946;
+}
+
+.cardTemp.blue {
+    color: #457b9d;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100px;
+        padding: 10px;
+    }
+
+    .iconCard {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        width: 90px;
+    }
 }
