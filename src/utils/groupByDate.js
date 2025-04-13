@@ -1,3 +1,10 @@
+/**
+ * Splits an array by dates
+ *
+ * @param {object} timestamps - The array of date
+ * @returns {object} - Returns sorting object by date
+ */
+
 const groupByDay = (timestamps) => {
     const days = {};
 
